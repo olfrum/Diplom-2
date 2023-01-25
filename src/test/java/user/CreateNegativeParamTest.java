@@ -47,7 +47,7 @@ public class CreateNegativeParamTest {
     @Test
     @DisplayName("Create new user without mail/password/name")
     @Description("Result: status code 403")
-    public void checkCreateWithoutRequiedFields(){
+    public void checkCreateWithoutRequiredFields(){
         ValidatableResponse validatableResponse = userClient.createUser(user);
         validatableResponse.assertThat().statusCode(403)
                 .and().body("success", equalTo(false))

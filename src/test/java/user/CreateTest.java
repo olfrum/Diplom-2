@@ -3,8 +3,6 @@ package user;
 import generator.UserGenerator;
 import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
-import io.restassured.response.Response;
-import io.restassured.response.Validatable;
 import io.restassured.response.ValidatableResponse;
 import logic.UserClient;
 import org.junit.After;
@@ -20,7 +18,6 @@ import static org.hamcrest.core.IsEqual.equalTo;
     User userData;
     ValidatableResponse validResponse;
     UserClient userClient;
-    private static String authToken;
 
     @Before
     public void setUp(){

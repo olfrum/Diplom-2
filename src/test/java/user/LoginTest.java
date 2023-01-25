@@ -52,16 +52,16 @@ public class LoginTest {
         userData.setEmail(validEmail);
     }
     @Test
-    @DisplayName("Wrong email")
+    @DisplayName("Wrong password")
     @Description("Result : status code 401")
     public void loginNonExistPassword(){
         String validPass = userData.getPassword();
-        userData.setEmail("1" + userData.getEmail());
+        userData.setPassword("1" + userData.getPassword());
         ValidatableResponse validatableResponse = userClient.authUser(userData);
         validatableResponse
                 .statusCode(401)
                 .and().body("message", equalTo("email or password are incorrect"));
-        userData.setEmail(validPass);
+        userData.setPassword(validPass);
     }
 
     @After

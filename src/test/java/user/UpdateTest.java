@@ -17,7 +17,6 @@ public class UpdateTest {
     User userData;
     UserClient userClient;
     ValidatableResponse validResponse;
-    OrderClient orderClient;
     String authToken;
     String email;
     String pass;
